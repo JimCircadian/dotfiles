@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+DRY=0
+
+usage() {
+    echo "Usage: $0 [[-d|--dry] | [-h|--help]]"
+}
+
+while [ "$1" != "" ]; do
+    case $1 in
+        -d | --dry )    DRY=1
+            ;;
+        -h | --help )   usage
+            exit 0
+            ;;
+    esac
+    shift
+done
+
+CMD="rsync -avXE"
+
+if [ $DRY == 1 ]; then
+    echo "Running without changing anything"
+    CMD="${CMD} --dry-run"
+fi
+
+CURDIR="$( pwd -P )"
+
+# Nice one Dave Dopson https://stackoverflow.com/questions/59895/get-the-source-directory-of-a-bash-script-from-within-the-script-itself/59916
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+    DIRNAME="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+    SOURCE="$(readlink "$SOURCE")"
+    [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" 
+done
+DIRNAME="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && cd .. && pwd )"
+
+CMD="$CMD --exclude=/.gitignore --exclude=/.git --exclude=/LICENSE --exclude=/README.md --exclude=/bin/sync_dotfiles --include=* $DIRNAME/ ${HOME}/"
+
+if [ ! $DRY ]; then
+    $CMD
+
+    if [ ! -d $HOME/bin ]; then
+        echo "Creating BIN directory and symlinking sync script to git repo"
+        mkdir $HOME/bin
+    fi
+
+    if [ ! -L $HOME/bin/sync_dotfiles ]; then
+        ln -s $DIRNAME/bin/sync_dotfiles $HOME/bin/sync_dotfiles
+    fi
+else
+    echo "$CMD"
+fi
+
+cd $CURDIR
