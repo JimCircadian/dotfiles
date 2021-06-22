@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=projectM PulseAudio Visualization
+GenericName=PulseAudio Stream Visualization
+Comment=Visualization of PulseAudio streams with projectM
+Exec=projectM-pulseaudio
+Icon=prjm16-transparent
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;
+X-Desktop-File-Install-Version=0.22
+X-XFCE-Source=file:///usr/share/applications/projectM-pulseaudio.desktop

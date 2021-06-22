@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Octave 4.4.1
+Comment=
+Exec=/usr/local/octave/4.4.1/bin/octave --gui
+Icon=/usr/local/octave/4.4.1/share/icons/hicolor/scalable/apps/octave.svg
+Path=/home/circadian
+Terminal=false
+StartupNotify=false

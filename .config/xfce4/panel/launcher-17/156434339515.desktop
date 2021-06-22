@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=Visual Studio Code - OSS
+Comment=Code Editing. Redefined.
+GenericName=Text Editor
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=code-oss --file-forwarding com.visualstudio.code.oss --unity-launch @@ %F @@
+Icon=com.visualstudio.code.oss
+Type=Application
+StartupNotify=false
+StartupWMClass=Code - OSS
+Categories=Utility;TextEditor;Development;IDE;
+MimeType=text/plain;inode/directory;
+Actions=new-empty-window;
+Keywords=vscode;
+X-Flatpak=com.visualstudio.code.oss
+X-XFCE-Source=file:///var/lib/flatpak/exports/share/applications/com.visualstudio.code.oss.desktop
+
+[Desktop Action new-empty-window]
+Name=New Empty Window
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=code-oss --file-forwarding com.visualstudio.code.oss --new-window @@ %F @@
+Icon=com.visualstudio.code.oss

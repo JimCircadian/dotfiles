@@ -1,0 +1,4 @@
+always_yes: true
+quiet: true
+changeps1: false
+

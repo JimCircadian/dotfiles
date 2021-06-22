@@ -1,0 +1,33 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Icon=org.libreoffice.LibreOffice.base
+Type=Application
+Categories=Office;Database;X-Red-Hat-Base;X-MandrivaLinux-MoreApplications-Databases;
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/libreoffice/program/soffice --file-forwarding org.libreoffice.LibreOffice --base @@u %U @@
+MimeType=application/vnd.oasis.opendocument.database;application/vnd.sun.xml.base;
+Name=LibreOffice Base
+GenericName=Database Development
+GenericName[en]=Database Development
+GenericName[en_GB]=Database Development
+Comment=Manage databases, create queries and reports to track and manage your information by using Base.
+Comment[en]=Manage databases, create queries and reports to track and manage your information by using Base.
+Comment[en_GB]=Manage databases, create queries and reports to track and manage your information using Base.
+StartupNotify=true
+X-GIO-NoFuse=true
+Keywords=Data;SQL;
+InitialPreference=5
+StartupWMClass=libreoffice-base
+X-KDE-Protocols=file,http,ftp,webdav,webdavs
+Actions=NewDocument;
+X-Desktop-File-Install-Version=0.23
+X-Endless-Alias=libreoffice-base
+X-Flatpak-RenamedFrom=libreoffice-base.desktop;org.libreoffice.LibreOffice-base.desktop;
+X-Flatpak=org.libreoffice.LibreOffice
+X-XFCE-Source=file:///var/lib/flatpak/exports/share/applications/org.libreoffice.LibreOffice.base.desktop
+
+[Desktop Action NewDocument]
+Name=New Database
+Name[en]=New Database
+Name[en_GB]=New Database
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/libreoffice/program/soffice org.libreoffice.LibreOffice --base

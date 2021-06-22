@@ -1,0 +1,33 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Icon=org.libreoffice.LibreOffice.draw
+Type=Application
+Categories=Office;FlowChart;Graphics;2DGraphics;VectorGraphics;X-Red-Hat-Base;X-MandrivaLinux-Office-Drawing;
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/libreoffice/program/soffice --file-forwarding org.libreoffice.LibreOffice --draw @@u %U @@
+MimeType=application/vnd.oasis.opendocument.graphics;application/vnd.oasis.opendocument.graphics-flat-xml;application/vnd.oasis.opendocument.graphics-template;application/vnd.sun.xml.draw;application/vnd.sun.xml.draw.template;application/vnd.visio;application/x-wpg;application/vnd.corel-draw;application/vnd.ms-publisher;image/x-freehand;application/clarisworks;application/x-pagemaker;application/pdf;application/x-stardraw;image/x-emf;image/x-wmf;
+Name=LibreOffice Draw
+GenericName=Drawing Program
+GenericName[en]=Drawing Program
+GenericName[en_GB]=Drawing Program
+Comment=Create and edit drawings, flow charts and logos by using Draw.
+Comment[en]=Create and edit drawings, flow charts, and logos by using Draw.
+Comment[en_GB]=Create and edit drawings, flow charts and logos using Draw.
+StartupNotify=true
+X-GIO-NoFuse=true
+Keywords=Vector;Schema;Diagram;Layout;OpenDocument Graphics;Microsoft Publisher;Microsoft Visio;Corel Draw;cdr;odg;svg;pdf;vsd;
+InitialPreference=5
+StartupWMClass=libreoffice-draw
+X-KDE-Protocols=file,http,ftp,webdav,webdavs
+Actions=NewDocument;
+X-Desktop-File-Install-Version=0.23
+X-Endless-Alias=libreoffice-draw
+X-Flatpak-RenamedFrom=libreoffice-draw.desktop;org.libreoffice.LibreOffice-draw.desktop;
+X-Flatpak=org.libreoffice.LibreOffice
+X-XFCE-Source=file:///var/lib/flatpak/exports/share/applications/org.libreoffice.LibreOffice.draw.desktop
+
+[Desktop Action NewDocument]
+Name=New Drawing
+Name[en]=New Drawing
+Name[en_GB]=New Drawing
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/libreoffice/program/soffice org.libreoffice.LibreOffice --draw

@@ -13,4 +13,4 @@ set wildmenu
 set showmatch		" highlight braces
 
 set nobackup
-
+set paste

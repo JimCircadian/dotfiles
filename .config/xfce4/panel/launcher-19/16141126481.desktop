@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=XMMS
+Comment=Play Ogg Vorbis and other audio files
+Comment[en_GB]=Play Ogg Vorbis and other audio files
+Exec=xmms -e -p %F
+Icon=xmms
+MimeType=audio/x-mp3;audio/x-it;audio/x-mod;audio/x-s3m;audio/x-stm;audio/x-wav;audio/x-mpegurl;audio/mpegurl;audio/x-scpls;application/x-ogg;application/ogg;
+GenericName=Audio Player
+GenericName[en_GB]=Audio Player
+Terminal=false
+Type=Application
+MapNotify=false
+Categories=AudioVideo;
+X-Desktop-File-Install-Version=0.23
+X-XFCE-Source=file:///usr/share/applications/xmms.desktop

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.1
+Name=draw.io
+Comment=draw.io desktop
+Icon=com.jgraph.drawio.desktop
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=start-drawio-desktop com.jgraph.drawio.desktop
+Terminal=false
+Categories=Graphics;
+X-Flatpak=com.jgraph.drawio.desktop
+X-XFCE-Source=file:///var/lib/flatpak/exports/share/applications/com.jgraph.drawio.desktop.desktop
