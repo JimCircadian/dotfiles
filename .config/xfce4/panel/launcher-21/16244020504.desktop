@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=thunderbird --file-forwarding org.mozilla.Thunderbird @@u %u @@
+Icon=org.mozilla.Thunderbird
+Terminal=false
+Type=Application
+MimeType=message/rfc822;x-scheme-handler/mailto;
+StartupNotify=false
+Categories=Network;Email;
+Name=Thunderbird Mail
+Comment=Send and receive mail with Thunderbird
+GenericName=Mail Client
+Keywords=Email;E-mail;Newsgroup;Feed;RSS
+X-Flatpak=org.mozilla.Thunderbird
+X-XFCE-Source=file:///var/lib/flatpak/exports/share/applications/org.mozilla.Thunderbird.desktop

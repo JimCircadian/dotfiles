@@ -1,0 +1,30 @@
+[Desktop Entry]
+Version=1.0
+Name=Chromium
+GenericName=Web Browser
+GenericName[en_GB]=Web Browser
+Comment=Access the Internet
+Comment[en_GB]=Access the Internet
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/chromium --file-forwarding org.chromium.Chromium @@u %U @@
+StartupWMClass=chromium-browser
+StartupNotify=true
+Terminal=false
+Icon=org.chromium.Chromium
+Type=Application
+Categories=Network;WebBrowser;
+Keywords=chrome;internet;
+MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/ftp;x-scheme-handler/http;x-scheme-handler/https;
+Actions=new-window;new-private-window;
+X-Flatpak-RenamedFrom=chromium-browser.desktop;
+X-Flatpak=org.chromium.Chromium
+X-XFCE-Source=file:///var/lib/flatpak/exports/share/applications/org.chromium.Chromium.desktop
+
+[Desktop Action new-window]
+Name=New Window
+Name[en_GB]=New Window
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/chromium org.chromium.Chromium
+
+[Desktop Action new-private-window]
+Name=New Incognito Window
+Name[en_GB]=New Incognito window
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/chromium org.chromium.Chromium --incognito
