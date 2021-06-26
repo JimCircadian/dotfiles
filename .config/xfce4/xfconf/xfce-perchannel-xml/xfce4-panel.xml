@@ -156,6 +156,7 @@
     <property name="plugin-21" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="16244020504.desktop"/>
+        <value type="string" value="16247435671.desktop"/>
         <value type="string" value="16148653821.desktop"/>
         <value type="string" value="15912903241.desktop"/>
         <value type="string" value="15852626431.desktop"/>
